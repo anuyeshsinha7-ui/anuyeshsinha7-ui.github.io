@@ -9,7 +9,7 @@ const LINKS = {
   post_hydrogen: "",     // URL of the green hydrogen carousel post
   post_ketan: "",        // URL of the Ketan Parekh carousel post
   titanic_notebook: "",  // e.g. "projects/titanic.html" once the notebook is added
-  internship_report: ""  // "nuclear-report/" once the IDBI report is cleared for publishing
+  internship_report: "nuclear-report/"  // interactive summer internship report
 };
 
 document.documentElement.classList.add("js");
@@ -57,6 +57,10 @@ if (emailLine) {
     emailLine.hidden = true;
   }
 }
+
+document.querySelectorAll("[data-show-with]").forEach((el) => {
+  if (!LINKS[el.dataset.showWith]) el.hidden = true;
+});
 
 // Hide the whole Writing section if nothing in it has a link yet.
 const writing = document.getElementById("writing");
