@@ -15,26 +15,26 @@ A static site (plain HTML, CSS, JS). No build step, so GitHub Pages serves it as
 ## ReliefChain prototype (`reliefchain/`)
 
 The blockchain disaster relief simulator, copied from its original build so it runs from
-this site at `https://YOUR-USERNAME.github.io/reliefchain/` with no dependency on Google
+this site at `https://anuyeshsinha7-ui.github.io/reliefchain/` with no dependency on Google
 AI Studio. It's a compiled React app (one JS file, one CSS file) that makes no external
 calls. Asset paths were changed from `/assets/` to `./assets/` so it works in a subfolder.
 If you rebuild it later, replace the files in `reliefchain/` and keep the paths relative.
 
 ## Publish on GitHub Pages
 
-1. On github.com, create a **public** repository named exactly `YOUR-USERNAME.github.io`.
+1. On github.com, create a **public** repository named exactly `anuyeshsinha7-ui.github.io`.
    Don't add a README, licence or .gitignore.
 2. Push this folder (run from inside `portfolio/`):
 
    ```bash
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git
+   git remote add origin https://github.com/anuyeshsinha7-ui/anuyeshsinha7-ui.github.io.git
    git push -u origin main
    ```
 
    When git asks for a password, paste a GitHub **Personal Access Token**
    (Settings → Developer settings → Personal access tokens), not your account password.
 3. In the repo: **Settings → Pages → Source: Deploy from a branch → `main` / root**.
-4. After a minute or two the site is live at `https://YOUR-USERNAME.github.io`.
+4. After a minute or two the site is live at `https://anuyeshsinha7-ui.github.io`.
 
 To update later: edit, then `git add -A && git commit -m "Update" && git push`.
 
