@@ -12,6 +12,14 @@ A static site (plain HTML, CSS, JS). No build step, so GitHub Pages serves it as
 3. **Resume**: `assets/Anu-Yesh-Sinha-Resume.pdf` is currently the V9 EY GDS version.
    Replace it with whichever CV you want recruiters to see (keep the same filename).
 
+## ReliefChain prototype (`reliefchain/`)
+
+The blockchain disaster relief simulator, copied from its original build so it runs from
+this site at `https://YOUR-USERNAME.github.io/reliefchain/` with no dependency on Google
+AI Studio. It's a compiled React app (one JS file, one CSS file) that makes no external
+calls. Asset paths were changed from `/assets/` to `./assets/` so it works in a subfolder.
+If you rebuild it later, replace the files in `reliefchain/` and keep the paths relative.
+
 ## Publish on GitHub Pages
 
 1. On github.com, create a **public** repository named exactly `YOUR-USERNAME.github.io`.
