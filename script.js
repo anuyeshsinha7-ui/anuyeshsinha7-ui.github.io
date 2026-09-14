@@ -8,7 +8,8 @@ const LINKS = {
   post_zero_price: "",   // URL of the ₹0 electricity carousel post
   post_hydrogen: "",     // URL of the green hydrogen carousel post
   post_ketan: "",        // URL of the Ketan Parekh carousel post
-  titanic_notebook: ""   // e.g. "projects/titanic.html" once the notebook is added
+  titanic_notebook: "",  // e.g. "projects/titanic.html" once the notebook is added
+  internship_report: ""  // "nuclear-report/" once the IDBI report is cleared for publishing
 };
 
 document.documentElement.classList.add("js");
@@ -27,6 +28,35 @@ document.querySelectorAll("[data-link]").forEach((el) => {
   }
   el.href = key === "email" ? `mailto:${value}` : value;
 });
+
+// Email: mailto only works if the visitor has a mail app set up, so also
+// copy the address to the clipboard and say so.
+const toast = document.querySelector(".toast");
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.hidden = false;
+  clearTimeout(showToast.t);
+  showToast.t = setTimeout(() => { toast.hidden = true; }, 3500);
+}
+function copyEmail() {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(LINKS.email)
+      .then(() => showToast(`Email copied: ${LINKS.email}`))
+      .catch(() => showToast(LINKS.email));
+  } else {
+    showToast(LINKS.email);
+  }
+}
+document.querySelectorAll('[data-link="email"]').forEach((el) => el.addEventListener("click", copyEmail));
+const emailLine = document.querySelector('[data-show="email"]');
+if (emailLine) {
+  if (LINKS.email) {
+    emailLine.querySelector(".email-text").textContent = LINKS.email;
+    emailLine.querySelector(".copy-btn").addEventListener("click", copyEmail);
+  } else {
+    emailLine.hidden = true;
+  }
+}
 
 // Hide the whole Writing section if nothing in it has a link yet.
 const writing = document.getElementById("writing");
