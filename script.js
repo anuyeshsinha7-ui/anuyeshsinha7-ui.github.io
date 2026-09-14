@@ -7,7 +7,8 @@ const LINKS = {
   email: "anuyeshsinha7@gmail.com",
   post_zero_price: "",   // URL of the ₹0 electricity carousel post
   post_hydrogen: "",     // URL of the green hydrogen carousel post
-  post_ketan: ""         // URL of the Ketan Parekh carousel post
+  post_ketan: "",        // URL of the Ketan Parekh carousel post
+  titanic_notebook: ""   // e.g. "projects/titanic.html" once the notebook is added
 };
 
 document.documentElement.classList.add("js");

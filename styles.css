@@ -272,3 +272,5 @@ details li + li { margin-top: 4px; }
   .funnel li { min-width: 0; width: 100%; }
   .footer { flex-direction: column; gap: 4px; }
 }
+
+details + .text-link { margin-top: 0; border-top: 0; padding-top: 10px; }
