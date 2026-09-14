@@ -5,6 +5,7 @@
 const LINKS = {
   linkedin: "",          // e.g. "https://www.linkedin.com/in/your-handle/"
   email: "anuyeshsinha7@gmail.com",
+  email_college: "anuyesh.pgdm27g@greatlakes.edu.in",
   post_zero_price: "",   // URL of the ₹0 electricity carousel post
   post_hydrogen: "",     // URL of the green hydrogen carousel post
   post_ketan: "",        // URL of the Ketan Parekh carousel post
@@ -38,28 +39,21 @@ function showToast(msg) {
   clearTimeout(showToast.t);
   showToast.t = setTimeout(() => { toast.hidden = true; }, 3500);
 }
-function copyEmail() {
+function copyEmail(address) {
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(LINKS.email)
-      .then(() => showToast(`Email copied: ${LINKS.email}`))
-      .catch(() => showToast(LINKS.email));
+    navigator.clipboard.writeText(address)
+      .then(() => showToast(`Email copied: ${address}`))
+      .catch(() => showToast(address));
   } else {
-    showToast(LINKS.email);
+    showToast(address);
   }
 }
-document.querySelectorAll('[data-link="email"]').forEach((el) => el.addEventListener("click", copyEmail));
-const emailLine = document.querySelector('[data-show="email"]');
-if (emailLine) {
-  if (LINKS.email) {
-    emailLine.querySelector(".email-text").textContent = LINKS.email;
-    emailLine.querySelector(".copy-btn").addEventListener("click", copyEmail);
-  } else {
-    emailLine.hidden = true;
-  }
-}
-
-document.querySelectorAll("[data-show-with]").forEach((el) => {
-  if (!LINKS[el.dataset.showWith]) el.hidden = true;
+document.querySelectorAll('[data-link="email"]').forEach((el) => el.addEventListener("click", () => copyEmail(LINKS.email)));
+document.querySelectorAll("[data-show^='email']").forEach((line) => {
+  const address = LINKS[line.dataset.show];
+  if (!address) { line.hidden = true; return; }
+  line.querySelector(".email-text").textContent = address;
+  line.querySelector(".copy-btn").addEventListener("click", () => copyEmail(address));
 });
 
 // Hide the whole Writing section if nothing in it has a link yet.
