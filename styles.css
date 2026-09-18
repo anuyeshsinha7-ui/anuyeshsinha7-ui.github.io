@@ -99,7 +99,7 @@ p { margin: 0; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: #2fa36b; flex: none; transform: translateY(-1px); box-shadow: 0 0 0 4px color-mix(in srgb, #2fa36b 20%, transparent); }
 
 .portrait {
-  margin: 0; position: relative; aspect-ratio: 649 / 1000; max-width: 100%;
+  margin: 0; position: relative; aspect-ratio: 4 / 5; max-width: 100%;
   border-radius: 18px; overflow: hidden; background: var(--accent);
   box-shadow: var(--shadow);
 }
