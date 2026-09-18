@@ -103,7 +103,8 @@ p { margin: 0; }
   border-radius: 18px; overflow: hidden; background: var(--accent);
   box-shadow: var(--shadow);
 }
-.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; z-index: 1; }
+.portrait picture { position: absolute; inset: 0; z-index: 1; display: block; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .monogram {
   position: absolute; inset: 0; display: grid; place-items: center;
   font: 500 96px/1 var(--serif); color: var(--on-accent); letter-spacing: -.03em;
@@ -254,7 +255,7 @@ details li + li { margin-top: 4px; }
   .nav-links .nav-cta { margin-top: 8px; }
   .hero { grid-template-columns: 1fr; padding-block: 48px 40px; gap: 32px; }
   .portrait { order: -1; width: 136px; border-radius: 50%; aspect-ratio: 1; }
-  .portrait img { object-position: 50% 0; }
+  .portrait img { object-position: 50% 50%; }
   .monogram { font-size: 44px; }
   .tick { gap: 4px 14px; }
   .grid, .posts, .bg-grid { grid-template-columns: 1fr; }
@@ -271,6 +272,8 @@ details + .text-link { margin-top: 0; border-top: 0; padding-top: 10px; }
 .report-btn { align-self: flex-start; }
 .email-lines { margin-top: 18px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .email-line { font: 500 15px var(--mono); color: var(--ink); overflow-wrap: anywhere; }
+.email-text { text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+.email-text:hover { color: var(--accent-2); border-color: var(--accent-2); }
 .email-label { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin-right: 6px; }
 .copy-btn { margin-left: 8px; font: 500 12px var(--sans); color: var(--accent-2); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
 .copy-btn:hover { border-color: var(--accent-2); }

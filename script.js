@@ -30,31 +30,16 @@ document.querySelectorAll("[data-link]").forEach((el) => {
   el.href = key === "email" ? `mailto:${value}` : value;
 });
 
-// Email: mailto only works if the visitor has a mail app set up, so also
-// copy the address to the clipboard and say so.
-const toast = document.querySelector(".toast");
-function showToast(msg) {
-  toast.textContent = msg;
-  toast.hidden = false;
-  clearTimeout(showToast.t);
-  showToast.t = setTimeout(() => { toast.hidden = true; }, 3500);
+// Number the sections that are actually visible, so the list never skips a number.
+function renumberSections() {
+  let n = 0;
+  document.querySelectorAll("[data-sec]").forEach((el) => {
+    const section = el.closest("section");
+    if (section && section.hidden) { el.hidden = true; return; }
+    n += 1;
+    el.textContent = `${String(n).padStart(2, "0")} · ${el.dataset.sec}`;
+  });
 }
-function copyEmail(address) {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(address)
-      .then(() => showToast(`Email copied: ${address}`))
-      .catch(() => showToast(address));
-  } else {
-    showToast(address);
-  }
-}
-document.querySelectorAll('[data-link="email"]').forEach((el) => el.addEventListener("click", () => copyEmail(LINKS.email)));
-document.querySelectorAll("[data-show^='email']").forEach((line) => {
-  const address = LINKS[line.dataset.show];
-  if (!address) { line.hidden = true; return; }
-  line.querySelector(".email-text").textContent = address;
-  line.querySelector(".copy-btn").addEventListener("click", () => copyEmail(address));
-});
 
 // Hide the whole Writing section if nothing in it has a link yet.
 const writing = document.getElementById("writing");
@@ -92,4 +77,5 @@ if ("IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
 }
 
+renumberSections();
 document.getElementById("year").textContent = new Date().getFullYear();
