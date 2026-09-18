@@ -3,37 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anu Yesh Sinha · Valuation, Equity Research &amp; Analytics</title>
+<title>Anu Yesh Sinha — Valuation &amp; Analytics</title>
 <meta name="description" content="Portfolio of Anu Yesh Sinha, PGDM '27 at Great Lakes Gurgaon. Valuation, equity research and analytics work, including coverage of 15 listed companies across India's nuclear energy value chain.">
-<meta property="og:title" content="Anu Yesh Sinha · Valuation, Equity Research & Analytics">
-<meta property="og:description" content="Machine learning, analytics and valuation work by a PGDM '27 candidate at Great Lakes Gurgaon.">
+<meta property="og:title" content="Anu Yesh Sinha — Valuation & Analytics">
+<meta property="og:description" content="Valuation, equity research and analytics work by a PGDM '27 candidate at Great Lakes Gurgaon.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307090b'/><text x='50%' y='58%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='32' fill='%23e8b45c'>A</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23141414'/><text x='50%' y='58%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='32' fill='%23f0c06c'>A</text></svg>">
 </head>
 <body>
 
-<!-- INTRO -->
-<div class="intro" id="intro">
-  <div class="intro-inner">
-    <div class="intro-term">
+<!-- LAMP GATE -->
+<div class="gate" id="gate">
+  <div class="lamp-wrap">
+    <div class="lamp">
+      <span class="lamp-glow" aria-hidden="true"></span>
+      <svg viewBox="0 0 300 300" aria-hidden="true">
+        <path class="shade" d="M96 118 L124 46 L176 46 L204 118 Z"/>
+        <rect x="146" y="118" width="8" height="96" fill="#2a2f3a"/>
+        <ellipse cx="150" cy="214" rx="34" ry="8" fill="#2a2f3a"/>
+        <rect x="40" y="214" width="220" height="10" rx="3" fill="#23262d"/>
+        <rect x="52" y="224" width="9" height="52" fill="#1c1f25"/>
+        <rect x="239" y="224" width="9" height="52" fill="#1c1f25"/>
+      </svg>
+      <button class="cord" id="cord" aria-label="Pull the switch to turn on the light">
+        <span class="wire"></span>
+        <span class="ball"></span>
+      </button>
+    </div>
+    <span class="gate-hint" id="gateHint">Pull the switch ↓</span>
+  </div>
+  <div class="gate-term">
+    <div class="term">
       <div class="term-bar"><i></i><i></i><i></i><span>anu@coverage — bash</span></div>
       <div class="term-body" id="termBody"></div>
     </div>
-    <button class="intro-skip" id="introSkip">Skip intro</button>
   </div>
+  <button class="gate-enter" id="gateEnter">Enter ↓</button>
 </div>
 
-<div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">Anu<em>.</em></a>
+    <a class="brand" href="#top">Anu<span>.</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#coverage">Coverage</a>
@@ -43,8 +60,8 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-tools">
-      <button class="icon-btn" id="themeBtn" aria-label="Switch to light mode" title="Switch theme">☾</button>
-      <a class="nav-cta" href="../assets/Anu-Yesh-Sinha-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="icon-btn" id="themeBtn" aria-label="Switch to light mode">☾</button>
+      <a class="pill pill-solid" href="#contact">Let's talk</a>
       <button class="icon-btn nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">≡</button>
     </div>
   </div>
@@ -55,115 +72,152 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="hero-text">
-        <div class="hero-eyebrow rv">
-          <span class="label">PGDM '27 · Great Lakes Gurgaon</span>
-          <span class="label amber">Valuation · Analytics</span>
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow rv">PGDM '27 · Great Lakes Institute of Management, Gurgaon</p>
+          <h1 class="display rv">Anu <span class="l2 amber ital">Yesh Sinha</span></h1>
+          <p class="hero-claim rv">I work out what a business is worth and whether the market agrees.</p>
         </div>
-        <h1>
-          <span class="line"><span>Anu Yesh</span></span>
-          <span class="line"><span>Sinha</span></span>
-          <span class="line"><span class="thin serif"><i>what it's worth.</i></span></span>
-        </h1>
-        <p class="hero-lede rv">I work out <b>what a business is worth</b> and whether the market agrees. Most recently: coverage of <b>15 listed companies</b> across India's nuclear energy value chain for a bank treasury desk, built as one repeatable screen rather than fifteen separate notes.</p>
-        <div class="cta-row rv">
-          <a class="btn btn-solid" href="../assets/Anu-Yesh-Sinha-Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
-          <a class="btn" data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <button class="btn" data-link="email" type="button">Email me</button>
-        </div>
-        <p class="hero-status rv"><span class="dot" aria-hidden="true"></span>Open to analyst roles in valuation, transaction advisory, consulting and equity research · Gurugram / Delhi NCR</p>
+        <figure class="cv-card rv">
+          <div class="sheet">
+            <img src="../assets/photo.jpg" alt="Anu Yesh Sinha" width="800" height="1000">
+          </div>
+          <div class="cv-actions">
+            <a href="../assets/Anu-Yesh-Sinha-Resume.pdf" target="_blank" rel="noopener">Open resum&eacute; <span aria-hidden="true">↗</span></a>
+            <a href="../assets/Anu-Yesh-Sinha-Resume.pdf" download>Download <span aria-hidden="true">↓</span></a>
+          </div>
+        </figure>
       </div>
-      <figure class="portrait rv">
-        <img src="../assets/photo.jpg" alt="Anu Yesh Sinha" width="800" height="1000">
-      </figure>
+
+      <div class="hero-bottom">
+        <div>
+          <p class="hero-lede rv">I work in valuation and equity research, and a B.Tech in Computer Science is why I build a screen once instead of running the same analysis fifteen times. My most recent work gave the treasury desk at IDBI a ranked view of <b>15 listed companies</b> across India's nuclear energy value chain, sorted into four conviction bands with a recommendation on every name.</p>
+          <p class="hero-status rv"><span class="dot" aria-hidden="true"></span>Open to analyst roles in valuation, transaction advisory, consulting and equity research</p>
+          <div class="hero-cta rv">
+            <a class="pill" data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="pill" data-link="email" href="#">Email me</a>
+          </div>
+        </div>
+        <div class="hero-meta rv">
+          <span>Gurugram / Delhi NCR</span>
+          <span>Scroll ↓</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true"><span class="bar"></span><span class="label">Scroll</span></div>
   </section>
 
   <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track" id="marquee"></div>
-  </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
 
   <!-- ABOUT -->
   <section class="section wrap" id="about">
-    <div class="sec-head rv">
-      <h2>The short version</h2>
-      <p class="label">01 — About</p>
-    </div>
-    <div class="about-grid">
-      <p class="about-lede rv">I came to finance from a B.Tech in Computer Science, so I reach for a screen I can run fifteen times before I reach for a spreadsheet I can run once. <span>The part I care about is the last one: turning the analysis into a call somebody can act on.</span></p>
-      <div class="facts">
-        <div class="fact rv"><span class="label">Now</span><p>PGDM in Finance and Business Analytics at Great Lakes Institute of Management, Gurgaon. Finishing 2027.</p></div>
-        <div class="fact rv"><span class="label">Working on</span><p>Advanced Valuation and Financial Modelling with The Valuation School, and machine learning I can explain to a non-technical desk.</p></div>
-        <div class="fact rv"><span class="label">Believes</span><p>A recommendation you cannot defend on its inputs is just an opinion with a number attached.</p></div>
-        <div class="fact rv"><span class="label">Recognition</span><p>National Finalist, Top 25, Chaitanya: The Leadership Competition, IIM Indore 2025.</p></div>
+    <p class="eyebrow sec-kicker rv" data-sec="About"></p>
+    <div class="about">
+      <figure class="about-photo rv">
+        <picture>
+          <source media="(max-width: 720px)" srcset="../assets/photo-square.jpg">
+          <img src="../assets/photo.jpg" alt="Anu Yesh Sinha" width="800" height="1000">
+        </picture>
+      </figure>
+      <div>
+        <p class="about-text rv">Top 25 nationally at Chaitanya, IIM Indore. Three months on a bank treasury desk. One screen that ranked fifteen companies the same way, so the desk could compare them instead of reading fifteen separate opinions.</p>
+        <p class="about-text rv">The part I care about is the last one: turning the analysis into a call somebody can act on.</p>
+        <div class="triple">
+          <div class="rv">
+            <h3>Now</h3>
+            <p>PGDM in Finance and Business Analytics at Great Lakes Institute of Management, Gurgaon. CGPA 3.21 / 4, finishing 2027.</p>
+          </div>
+          <div class="rv">
+            <h3>Studying</h3>
+            <p>Advanced Valuation and Financial Modelling with The Valuation School, in progress.</p>
+          </div>
+          <div class="rv">
+            <h3>Recognition</h3>
+            <p>National Finalist, Top 25, Chaitanya: The Leadership Competition, IIM Indore, 2025.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- COVERAGE (pinned) -->
-  <section class="section wrap flag" id="coverage">
+  <hr class="hair">
+
+  <!-- COVERAGE -->
+  <section class="section wrap" id="coverage">
+    <p class="eyebrow sec-kicker rv" data-sec="Flagship work"></p>
     <div class="sec-head rv">
-      <h2>Initiating coverage on India's nuclear value chain</h2>
-      <p class="label">02 — Flagship</p>
+      <h2>Initiating coverage on India's nuclear energy value chain</h2>
+      <p class="note">Fifteen listed companies, one repeatable screen, four conviction bands for the treasury desk.</p>
     </div>
-    <div class="flag-stage" id="flagStage">
-      <div class="flag-copy">
-        <div class="step-count"><span class="big" id="counter">15</span><span class="label">companies still standing</span></div>
-        <h3 class="serif">Fifteen names in. Four conviction bands out.</h3>
-        <p class="meta">Treasury Equity Intern · IDBI Treasury, Mumbai · Apr to Jun 2026</p>
-        <p class="body">The desk wanted a view on which listed names would gain from India's nuclear build-out. The information sat in company filings, regulatory orders and order books. No two companies reported it the same way.</p>
-        <p class="body">So every name went through the same tests in the same order before it could earn a recommendation. I wrote the sector thesis and presented it to the treasury desk.</p>
-        <div class="flag-cta">
-          <a class="btn btn-solid" data-link="internship_report" href="#" target="_blank" rel="noopener">Explore the interactive report <span aria-hidden="true">↗</span></a>
-          <span class="flag-note" data-show-with="internship_report">Interactive deck, best on a laptop.</span>
+    <div class="cov">
+      <div>
+        <h3 class="display">Fifteen names in. Four conviction bands out.</h3>
+        <p class="role">Treasury Equity Intern · IDBI Treasury, Mumbai · Apr to Jun 2026</p>
+        <div class="blk rv">
+          <h4>The problem</h4>
+          <p>The desk wanted a view on which listed names would gain from India's nuclear build-out. The information sat in company filings, regulatory orders and order books. No two companies reported it the same way.</p>
+        </div>
+        <div class="blk rv">
+          <h4>What I built</h4>
+          <p>One repeatable funnel for all fifteen companies. Each name went through the same risk, valuation and governance tests before it could get a recommendation, so the calls could be compared across the set.</p>
+        </div>
+        <div class="blk rv">
+          <h4>The output</h4>
+          <p>I wrote the sector thesis with a recommendation on each name and presented it to the treasury desk.</p>
+        </div>
+        <div class="cov-cta rv">
+          <a class="pill" data-link="internship_report" href="#" target="_blank" rel="noopener">Explore the interactive report ↗</a>
+          <span class="cov-note" data-show-with="internship_report">Interactive deck, best on a laptop.</span>
         </div>
       </div>
       <ol class="steps" id="steps">
-        <li class="step" data-left="15"><span class="n">01</span><span class="t">Universe<span class="d">15 listed companies across four zones of the plant</span></span></li>
-        <li class="step" data-left="15"><span class="n">02</span><span class="t">Risk screen<span class="d">Altman Z-score, Beneish M-score, interest coverage</span></span></li>
-        <li class="step" data-left="15"><span class="n">03</span><span class="t">Relative value<span class="d">P/E, EV/EBITDA and P/B against the 3-year average, mispriced only when 2 of 3 agree</span></span></li>
-        <li class="step" data-left="13"><span class="n">04</span><span class="t">Veto<span class="d">Five conditions on governance, promoter pledge and audit quality</span></span></li>
-        <li class="step" data-left="13"><span class="n">05</span><span class="t">Score<span class="d">Seven weighted dimensions: technology, policy, valuation, management, order book</span></span></li>
-        <li class="step" data-left="4"><span class="n">06</span><span class="t">Conviction<span class="d">Four bands, one call per name, top picks co-recommended</span></span></li>
+        <li class="step rv"><span class="n">01</span><span class="t">Universe<span class="d">15 listed companies across the nuclear value chain</span></span></li>
+        <li class="step rv"><span class="n">02</span><span class="t">Risk screen<span class="d">Altman Z-score, Beneish M-score, interest coverage</span></span></li>
+        <li class="step rv"><span class="n">03</span><span class="t">Relative value<span class="d">P/E, EV/EBITDA and P/B against the 3-year average, mispriced only when 2 of 3 agree</span></span></li>
+        <li class="step rv"><span class="n">04</span><span class="t">Veto<span class="d">Five conditions on governance, promoter pledge and audit quality</span></span></li>
+        <li class="step rv"><span class="n">05</span><span class="t">Score<span class="d">Seven weighted dimensions: technology, policy, valuation, management, order book</span></span></li>
+        <li class="step rv"><span class="n">06</span><span class="t">Conviction<span class="d">Four bands, one call per name</span></span></li>
       </ol>
     </div>
   </section>
 
+  <hr class="hair">
+
   <!-- WORK -->
   <section class="section wrap" id="work">
+    <p class="eyebrow sec-kicker rv" data-sec="Projects"></p>
     <div class="sec-head rv">
       <h2>Selected work</h2>
-      <p class="label">03 — Projects · click a row</p>
+      <p class="note">Machine learning, analytics and valuation, each built on a real dataset and pointed at a real question.</p>
     </div>
     <div id="workList"></div>
   </section>
 
+  <hr class="hair">
+
   <!-- WRITING -->
   <section class="section wrap" id="writing">
+    <p class="eyebrow sec-kicker rv" data-sec="Writing"></p>
     <div class="sec-head rv">
-      <h2>Things I was working out myself</h2>
-      <p class="label">04 — Writing</p>
+      <h2>Explainers I publish on LinkedIn</h2>
+      <p class="note">Short visual breakdowns of topics I was trying to understand myself.</p>
     </div>
     <div class="posts">
       <a class="post rv" data-link="post_zero_price" href="#" target="_blank" rel="noopener">
-        <span class="big">₹0</span>
+        <span class="num">₹0</span>
         <h3>The story behind ₹0 electricity prices</h3>
         <p>Why power briefly cleared at zero a unit on the exchange.</p>
         <span class="go">Read ↗</span>
       </a>
       <a class="post rv" data-link="post_hydrogen" href="#" target="_blank" rel="noopener">
-        <span class="big">H₂</span>
+        <span class="num">H₂</span>
         <h3>From excess electricity to green hydrogen</h3>
-        <p>How the BHEL-BARC electrolyser deal fits India's hydrogen push.</p>
+        <p>How the BHEL-BARC electrolyser deal fits India's green hydrogen push.</p>
         <span class="go">Read ↗</span>
       </a>
       <a class="post rv" data-link="post_ketan" href="#" target="_blank" rel="noopener">
-        <span class="big">2001</span>
+        <span class="num">2001</span>
         <h3>What happened in the Ketan Parekh scam</h3>
         <p>The mechanics of the fraud, laid out step by step.</p>
         <span class="go">Read ↗</span>
@@ -171,45 +225,32 @@
     </div>
   </section>
 
+  <hr class="hair">
+
   <!-- PATH -->
   <section class="section wrap" id="path">
+    <p class="eyebrow sec-kicker rv" data-sec="Path"></p>
     <div class="sec-head rv">
       <h2>Where I have been building</h2>
-      <p class="label">05 — Path</p>
+      <p class="note">Experience and education, with the toolkit I reach for.</p>
     </div>
-    <div class="path">
-      <div>
-        <div class="stack">
-          <p class="label stack-title">Experience</p>
-          <ul class="tl">
-            <li class="rv"><span class="when">Apr – Jun 2026</span><span class="what">Treasury Equity Intern</span><span class="where">IDBI Treasury, Mumbai · <a class="amber" href="#coverage">see the coverage work</a></span></li>
-          </ul>
-        </div>
-        <div class="stack">
-          <p class="label stack-title">Education</p>
-          <ul class="tl">
-            <li class="rv"><span class="when">2025 – 2027</span><span class="what">PGDM, Finance and Business Analytics</span><span class="where">Great Lakes Institute of Management, Gurgaon · CGPA 3.21 / 4</span></li>
-            <li class="rv"><span class="when">2019 – 2023</span><span class="what">B.Tech, Computer Science and Engineering</span><span class="where">University Institute of Technology, RGPV, Bhopal · 7.8 / 10</span></li>
-          </ul>
-        </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div id="panes"></div>
+
+    <div class="pane" style="margin-top: clamp(34px, 5vw, 60px)">
+      <div class="side-card rv">
+        <h4>Toolkit</h4>
+        <ul class="chips" id="skillChips"></ul>
       </div>
       <div>
-        <div class="stack">
-          <p class="label stack-title">Toolkit</p>
-          <ul class="skills" id="skillChips"></ul>
+        <div class="side-card rv">
+          <h4>Certification</h4>
+          <p class="honor"><b>Advanced Valuation and Financial Modelling</b>, The Valuation School · in progress</p>
         </div>
-        <div class="stack">
-          <p class="label stack-title">Certification</p>
-          <ul class="honors">
-            <li class="rv"><b>Advanced Valuation and Financial Modelling</b>, The Valuation School · in progress</li>
-          </ul>
-        </div>
-        <div class="stack">
-          <p class="label stack-title">Recognition &amp; leadership</p>
-          <ul class="honors">
-            <li class="rv"><b>National Finalist, Top 25</b> · Chaitanya: The Leadership Competition, IIM Indore, 2025</li>
-            <li class="rv"><b>Sergeant, National Cadet Corps</b> · commanded a 20-cadet contingent at a national CATC camp, 1st place in the Drill Competition</li>
-          </ul>
+        <div class="side-card rv">
+          <h4>Recognition &amp; leadership</h4>
+          <p class="honor"><b>National Finalist, Top 25</b> · Chaitanya: The Leadership Competition, IIM Indore, 2025</p>
+          <p class="honor"><b>Sergeant, National Cadet Corps</b> · commanded a 20-cadet contingent at a national CATC camp, 1st place in the Drill Competition</p>
         </div>
       </div>
     </div>
@@ -218,13 +259,25 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="wrap">
-      <p class="label rv">06 — Contact</p>
-      <h2 class="rv">Hiring for an analyst<br><span>seat? Let's talk.</span></h2>
-      <div class="mail-row" id="mailRow"></div>
-      <div class="cta-row rv">
-        <a class="btn" data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn" href="../assets/Anu-Yesh-Sinha-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-        <a class="btn" href="../index.html">Classic version</a>
+      <p class="eyebrow rv" data-sec="Contact"></p>
+      <h2 class="rv">Hiring for an analyst seat?<br><span class="amber ital">Let's talk.</span></h2>
+      <p class="rv" style="margin-top:22px;color:var(--ink-2);max-width:46ch">I would love to walk you through any of these projects. Let's connect.</p>
+      <div class="mails" id="mails"></div>
+      <div class="cols">
+        <div class="rv">
+          <h4>Elsewhere</h4>
+          <a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="../assets/Anu-Yesh-Sinha-Resume.pdf" target="_blank" rel="noopener">Resum&eacute; (PDF) ↗</a>
+        </div>
+        <div class="rv">
+          <h4>Based in</h4>
+          <p>Gurugram / Delhi NCR</p>
+          <p>Open to Mumbai and Bengaluru</p>
+        </div>
+        <div class="rv">
+          <h4>Currently</h4>
+          <p>PGDM '27 at Great Lakes Gurgaon. Open to analyst roles in valuation, transaction advisory, consulting and equity research.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -232,8 +285,8 @@
 </main>
 
 <footer class="wrap foot">
-  <span>© <span id="year">2026</span> Anu Yesh Sinha · Gurugram, India</span>
-  <span>Built with HTML, CSS and GSAP</span>
+  <span>© <span id="year">2026</span> Anu Yesh Sinha</span>
+  <span><a href="../index.html">Classic version</a></span>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
