@@ -205,7 +205,11 @@ document.querySelectorAll("[data-link]").forEach((el) => {
     el.hidden = true;
     return;
   }
-  if (el.tagName === "A") el.href = el.dataset.link === "email" ? `mailto:${value}` : value;
+  if (el.tagName === "A") {
+    el.href = el.dataset.link === "email" && LINKS.email_college
+      ? `mailto:${value}?cc=${encodeURIComponent(LINKS.email_college)}`
+      : el.dataset.link === "email" ? `mailto:${value}` : value;
+  }
 });
 document.querySelectorAll("[data-show-with]").forEach((el) => {
   if (!LINKS[el.dataset.showWith]) el.hidden = true;

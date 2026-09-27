@@ -28,7 +28,14 @@ document.querySelectorAll("[data-link]").forEach((el) => {
     }
     return;
   }
-  el.href = key === "email" ? `mailto:${value}` : value;
+  if (key === "email") {
+    // Email me writes to both addresses: personal in To, college in Cc.
+    el.href = LINKS.email_college
+      ? `mailto:${value}?cc=${encodeURIComponent(LINKS.email_college)}`
+      : `mailto:${value}`;
+    return;
+  }
+  el.href = value;
 });
 
 // Number the sections that are actually visible, so the list never skips a number.
