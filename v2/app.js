@@ -8,7 +8,7 @@ const LINKS = {
   email_college: "anuyesh.pgdm27g@greatlakes.edu.in",
   internship_report: "../nuclear-report/",
   reliefchain: "../reliefchain/",
-  titanic_notebook: "",
+  titanic_notebook: "https://colab.research.google.com/github/anuyeshsinha7-ui/anuyeshsinha7-ui.github.io/blob/main/projects/titanic.ipynb",
   post_zero_price: "",
   post_hydrogen: "",
   post_ketan: ""
@@ -26,7 +26,7 @@ const PROJECTS = [
       "Hyperparameter tuning on one base model"
     ],
     tags: ["Python", "Scikit-learn", "Ensembles"],
-    links: [{ label: "View the notebook ↗", key: "titanic_notebook" }]
+    links: [{ label: "Open in Google Colab ↗", key: "titanic_notebook" }]
   },
   {
     title: "Which households recovered fastest after COVID and why?",
