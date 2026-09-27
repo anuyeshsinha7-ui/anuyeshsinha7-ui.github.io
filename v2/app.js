@@ -8,6 +8,7 @@ const LINKS = {
   email_college: "anuyesh.pgdm27g@greatlakes.edu.in",
   internship_report: "../nuclear-report/",
   reliefchain: "../reliefchain/",
+  dax_model: "../projects/DAX-40-Index-Valuation-Anu-Yesh-Sinha.xlsx",
   titanic_notebook: "https://colab.research.google.com/github/anuyeshsinha7-ui/anuyeshsinha7-ui.github.io/blob/main/projects/titanic.ipynb",
   post_zero_price: "",
   post_hydrogen: "",
@@ -71,7 +72,8 @@ const PROJECTS = [
       "Discounted to an intrinsic index value for each market",
       "Compared intrinsic and market levels to judge relative pricing"
     ],
-    tags: ["FCFE", "Valuation", "Index analysis"]
+    tags: ["FCFE", "Valuation", "Index analysis"],
+    links: [{ label: "Download the DAX 40 model (Excel) ↓", key: "dax_model" }]
   }
 ];
 

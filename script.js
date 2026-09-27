@@ -9,6 +9,7 @@ const LINKS = {
   post_zero_price: "",   // URL of the ₹0 electricity carousel post
   post_hydrogen: "",     // URL of the green hydrogen carousel post
   post_ketan: "",        // URL of the Ketan Parekh carousel post
+  dax_model: "projects/DAX-40-Index-Valuation-Anu-Yesh-Sinha.xlsx",
   titanic_notebook: "https://colab.research.google.com/github/anuyeshsinha7-ui/anuyeshsinha7-ui.github.io/blob/main/projects/titanic.ipynb",  // e.g. "projects/titanic.html" once the notebook is added
   internship_report: "nuclear-report/"  // interactive summer internship report
 };
